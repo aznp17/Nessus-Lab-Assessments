@@ -3,7 +3,17 @@
 **Environment:** Mixed-OS Home Lab Network (Linux/QNAP, Windows, Network Infrastructure)
 
 ## 1. Project Overview
-This repository documents the vulnerability management lifecycle across a segmented network environment. The goal is to identify security flaws in different classes of devices (Storage, Compute, Network), prioritize them based on CVSS scores, and apply vendor-specific hardening.
+This project documents the end-to-end vulnerability management lifecycle within my personal home network. Using Nessus, I perform comprehensive credentialed and non-credentialed scans to identify security weaknesses across diverse device classes, including storage (NAS), compute (PCs/VMs), and networking hardware.
+
+The primary objective is to harden the environment by:
+
+Discovery: Mapping all active assets and services within the local subnet.
+
+Assessment: Analyzing vulnerabilities and prioritizing remediation based on CVSS scores and exploitability.
+
+Remediation: Applying firmware updates, OS patches, and configuration hardening to eliminate identified risks.
+
+Verification: Re-scanning to ensure patches were successful and the attack surface has been reduced.
 
 ## 2. Asset Assessments
 
