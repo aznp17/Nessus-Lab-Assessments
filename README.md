@@ -32,7 +32,7 @@ The primary objective is to harden the environment by:
 1.  **SMB Signing Not Required (CVSS 5.3):** The SMB server did not enforce message signing, allowing for potential Man-in-the-Middle (MitM) attacks.
 2.  **SSL Trust Issues (CVSS 6.5):** The device was using a default self-signed certificate, triggering trust errors and preventing identity verification.
 3.  **ICMP Timestamp Disclosure (CVSS 2.1):** The host exposed exact system uptime and date information to remote queries.
-
+ 
 **Remediation Actions:**
 * **SMB Hardening:** Configured Microsoft Networking advanced options to set SMB Signing to "Mandatory."
 * **Encryption:** Replaced the default self-signed certificate with a valid Let's Encrypt certificate generated via the QNAP dashboard.
@@ -40,8 +40,21 @@ The primary objective is to harden the environment by:
 
 ---
 
-### 🟡 Asset B: Windows Workstation (Windows 10/11)
-**Status:** 🚧 In Progress
+### 🟢 Asset B: Windows Workstation (Windows 10/11)
+**Status:** ✅Complete  **Risk Level:** Low Medium
 * **Device Role:** Primary workstation and virtualization host.
-* **Scan Focus:** Patch management, unquoted service paths, and third-party software vulnerabilities.
-* **Current
+* **Scan Type:** Non credentialed Scan
+* **Date:** February 22, 2026
+
+**Vulnerability Summary:**
+* Critical: 0
+* High: 0
+* Medium: 1
+* Low: 0
+
+**Key Findings:**
+1. **SMB Signing Not Required (CVSS 5.3):** The SMB server did not enforce message signing, allowing for potential Man in the Middle (MitM) attacks.
+
+**Remediation Actions:**
+* **SMB Hardening:** Configure Microsoft Networking advanced options via Local Security Policy to set SMB Signing to "Mandatory."
+* **Visibility Improvement:** Provide administrative credentials in Nessus and rerun the scan to accurately assess OS level vulnerabilities, missing patches, and third party software risks.
