@@ -7,13 +7,13 @@ This project documents the end-to-end vulnerability management lifecycle within 
 
 The primary objective is to harden the environment by:
 
-Discovery: Mapping all active assets and services within the local subnet.
+**Discovery**: Mapping all active assets and services within the local subnet.
 
-Assessment: Analyzing vulnerabilities and prioritizing remediation based on CVSS scores and exploitability.
+**Assessment**: Analyzing vulnerabilities and prioritizing remediation based on CVSS scores and exploitability.
 
-Remediation: Applying firmware updates, OS patches, and configuration hardening to eliminate identified risks.
+**Remediation**: Applying firmware updates, OS patches, and configuration hardening to eliminate identified risks.
 
-Verification: Re-scanning to ensure patches were successful and the attack surface has been reduced.
+**Verification**: Re-scanning to ensure patches were successful and the attack surface has been reduced.
 
 ## 2. Asset Assessments
 
