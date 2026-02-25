@@ -6,5 +6,5 @@ This directory contains a collection of deep-dive analyses into some of the most
 
 | Incident | Year | Primary Vector | Key Lesson |
 | :--- | :--- | :--- | :--- |
-| **Conduent Data Breach** | 2025 | Compromised VPN Password | Importance of MFA & OT/IT Segmentation |
+| **Conduent Data Breach** | 2025 | network intrusion targeting unencrypted "data in use" | Continuous Encryption|
 
