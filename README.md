@@ -1,60 +1,40 @@
-# Project: Multi-Asset Vulnerability Assessment
-**Tools:** Tenable Nessus Essentials, Nmap  
-**Environment:** Mixed-OS Home Lab Network (Linux/QNAP, Windows, Network Infrastructure)
+# 🛡️ Repository Guide: Scans, Remediations & Threat Intelligence
 
-## 1. Project Overview
-This project documents the end-to-end vulnerability management lifecycle within my personal home network. Using Nessus, I perform comprehensive credentialed and non-credentialed scans to identify security weaknesses across diverse device classes, including storage (NAS), compute (PCs/VMs), and networking hardware.
+Welcome to my cybersecurity repository. This repository serves as a practical, hands-on archive of cybersecurity practice that I accumulated and this guide will help you navigate the resources I have compiled.
 
-The primary objective is to harden the environment by:
 
-**Discovery**: Mapping all active assets and services within the local subnet.
+## 📂 What You Will Find Here
 
-**Assessment**: Analyzing vulnerabilities and prioritizing remediation based on CVSS scores and exploitability.
+This repository is divided into three core pillars:
 
-**Remediation**: Applying firmware updates, OS patches, and configuration hardening to eliminate identified risks.
+### 1. 🔍 Vulnerability Scans & Assessments
 
-**Verification**: Re-scanning to ensure patches were successful and the attack surface has been reduced.
+This section contains raw and sanitized output from Nessus security assessment tools. It demonstrates my methodology for identifying vulnerabilities across different environments (including cloud infrastructure and enterprise networks).
 
-## 2. Asset Assessments
+* **Network & Port Scans:** Nmap scan outputs detailing open ports, service versions, and OS fingerprinting.
+* **Vulnerability Assessments:** Reports generated from tools like Nessus or OpenVAS, categorized by CVSS (Common Vulnerability Scoring System) severity.
+* **Cloud Configurations:** Scans of Azure environments demonstrating misconfigurations in identity and access management (IAM) or storage accounts.
 
-### 🟢 Asset A: Network Attached Storage (QNAP NAS)
-**Status:** ✅ Complete | **Risk Level:** Low-Medium
-* **Device Role:** Centralized file storage and backup server.
-* **Scan Type:** Credentialed Advanced Scan.
-* **Date:** February 6, 2026
-* **Vulnerability Summary:**
-  * **Critical:** 0
-  * **High:** 0
-  * **Medium:** 4
-  * **Low:** 1
+### 2. 🛠️ Remediations & Hardening Strategies
 
-**Key Findings:**
-1.  **SMB Signing Not Required (CVSS 5.3):** The SMB server did not enforce message signing, allowing for potential Man-in-the-Middle (MitM) attacks.
-2.  **SSL Trust Issues (CVSS 6.5):** The device was using a default self-signed certificate, triggering trust errors and preventing identity verification.
-3.  **ICMP Timestamp Disclosure (CVSS 2.1):** The host exposed exact system uptime and date information to remote queries.
- 
-**Remediation Actions:**
-* **SMB Hardening:** Configured Microsoft Networking advanced options to set SMB Signing to "Mandatory."
-* **Encryption:** Replaced the default self-signed certificate with a valid Let's Encrypt certificate generated via the QNAP dashboard.
-* **Information Control:** Added firewall rules to block ICMP Timestamp requests.
+Identifying a flaw is only half the battle. This directory contains the practical steps, scripts, and documentation used to close the vulnerabilities found in the scans.
+
+* **Step-by-Step Patching Guides:** Documentation on how to mitigate specific CVEs.
+* **Automation Scripts:** Python and PowerShell scripts used to automate security enforcement (e.g., shutting down idle/unsecured Azure VMs, enforcing password policies).
+* **Architecture Adjustments:** Diagrams and explanations for redesigning networks to implement Zero Trust principles or network segmentation.
+
+### 3. 📜 Famous Cybersecurity Reports & Case Studies
+
+To understand the current threat landscape, we must study the past. This folder contains my personal analyses and summaries of landmark cybersecurity breaches and industry reports.
+
+* **Incident Post-Mortems:** Deep dives into famous breaches.
+* **Threat Actor Tactics:** Breakdowns of how advanced persistent threats (APTs) mapped to the MITRE ATT&CK framework during these historical events.
+* **Lessons Learned:** Strategic takeaways on how modern security frameworks (like NIST or CMMC) could have prevented these disasters.
 
 ---
 
-### 🟢 Asset B: Windows Workstation (Windows 10/11)
-**Status:** ✅Complete  **Risk Level:** Low Medium
-* **Device Role:** Primary workstation and virtualization host.
-* **Scan Type:** Non credentialed Scan
-* **Date:** February 22, 2026
+## 🧭 How to Navigate the Repository
 
-**Vulnerability Summary:**
-* Critical: 0
-* High: 0
-* Medium: 1
-* Low: 0
-
-**Key Findings:**
-1. **SMB Signing Not Required (CVSS 5.3):** The SMB server did not enforce message signing, allowing for potential Man in the Middle (MitM) attacks.
-
-**Remediation Actions:**
-* **SMB Hardening:** Configure Microsoft Networking advanced options via Local Security Policy to set SMB Signing to "Mandatory."
-* **Visibility Improvement:** Provide administrative credentials in Nessus and rerun the scan to accurately assess OS level vulnerabilities, missing patches, and third party software risks.
+1. **Start with the Scans:** Navigate to the `/Scans` directory to view the initial assessment of a system. Each scan file includes a brief markdown summary of the target environment.
+2. **Review the Fix:** For every scan, there is a corresponding markdown file or script in the `/Remediations` folder linked via the CVE number or system name.
+3. **Explore the Case Studies:** Browse the `/Reports` directory for standalone reading on major industry events.
