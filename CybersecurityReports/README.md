@@ -6,6 +6,5 @@ This directory contains a collection of deep-dive analyses into some of the most
 
 | Incident | Year | Primary Vector | Key Lesson |
 | :--- | :--- | :--- | :--- |
-| **Colonial Pipeline** | 2021 | Compromised VPN Password | Importance of MFA & OT/IT Segmentation |
-| **SolarWinds** | 2020 | Supply Chain Attack | Trust but Verify (Third-Party Risk) |
-| **Equifax** | 2017 | Unpatched Web Vulnerability | Patch Management & Asset Inventory |
+| **Conduent Data Breach** | 2025 | Compromised VPN Password | Importance of MFA & OT/IT Segmentation |
+
