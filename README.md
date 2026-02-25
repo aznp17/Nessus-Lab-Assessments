@@ -1,4 +1,4 @@
-# 🛡️ Repository Guide: Scans, Remediations & Threat Intelligence
+# 🛡️ Repository Guide: Scans, Remediations & Threat Reports
 
 Welcome to my cybersecurity repository. This repository serves as a practical, hands-on archive of cybersecurity practice that I accumulated and this guide will help you navigate the resources I have compiled.
 
