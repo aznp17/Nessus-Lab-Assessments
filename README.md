@@ -17,10 +17,9 @@ This section contains raw and sanitized output from Nessus security assessment t
 
 ### 2. 🛠️ Remediations & Hardening Strategies
 
-Identifying a flaw is only half the battle. This directory contains the practical steps, scripts, and documentation used to close the vulnerabilities found in the scans.
+This directory contains the practical steps and documentation used to close the vulnerabilities found in the scans.
 
 * **Step-by-Step Patching Guides:** Documentation on how to mitigate specific CVEs.
-* **Automation Scripts:** Python and PowerShell scripts used to automate security enforcement (e.g., shutting down idle/unsecured Azure VMs, enforcing password policies).
 * **Architecture Adjustments:** Diagrams and explanations for redesigning networks to implement Zero Trust principles or network segmentation.
 
 ### 3. 📜 Famous Cybersecurity Reports & Case Studies
